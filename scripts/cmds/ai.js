@@ -15,7 +15,7 @@ async function getAIResponse(input, userId, messageID) {
      { url: 'https://metoushela-rest-api-tp5g.onrender.com/api/gpt4o?', params: { context: input } }
   ];
 
-  let response = "𝐇𝐢 𝐡𝐨𝐰 𝐚𝐫𝐞 𝐲𝐨𝐮, 𝐡𝐨𝐰 𝐜𝐚𝐧 𝐈 𝐡𝐞𝐥𝐩 𝐲𝐨𝐮 𝐬𝐨 𝐟𝐚𝐫 🙂";
+  let response = "𝐬𝐚𝐥𝐮𝐭 𝐩𝐨𝐬𝐞𝐫 𝐦𝐨𝐢 𝐭𝐚 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 !!";
   let currentIndex = 0;
 
   for (let i = 0; i < services.length; i++) {
@@ -54,7 +54,7 @@ module.exports = {
     if (messageContent.startsWith("ai")) {
       const input = messageContent.replace(/^ai\s*/, "").trim();
       const { response, messageID } = await getAIResponse(input, event.senderID, message.messageID);
-      message.reply(`✰............✰: \n\n\n${response}\n\n╰┈┈┈➤⊹⊱✰✫✫✰⊰⊹`, messageID);
+      message.reply(`: \n\n\n${response}\n\n╰┈┈┈➤⊹⊱✰✫✫✰⊰🍀`, messageID);
     }
   }
 };
