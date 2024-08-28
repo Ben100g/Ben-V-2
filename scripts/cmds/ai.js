@@ -54,7 +54,7 @@ module.exports = {
     if (messageContent.startsWith("ai")) {
       const input = messageContent.replace(/^ai\s*/, "").trim();
       const { response, messageID } = await getAIResponse(input, event.senderID, message.messageID);
-      message.reply(`: \n\n\n${response}\n\n☘️`, messageID);
+      message.reply(` \n\n\n${response}\n\n☘️`, messageID);
     }
   }
 };
